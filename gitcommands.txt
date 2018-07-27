@@ -43,3 +43,16 @@ rm <file> 删除工作区文件
 
 git rm test.txt
 git commit -m "remove test.txt" 通过这两段命令从版本库中删除该文件
+
+#git与github结合
+添加ssh https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374385852170d9c7adf13c30429b9660d0eb689dd43a000
+#第一次使用创建需要以下命令
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:mahailuo/learngit.git
+git push -u origin master
+#第二次即可已使用以下命令
+git push origin master
+#如果要删除远程 Git 仓库 https://blog.csdn.net/top_code/article/details/50381432
+git remote rm origin
