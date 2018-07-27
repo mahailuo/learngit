@@ -2,3 +2,9 @@
 git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
 
+#在当前目录下初始化git，即创建git版本库
+git init 
+
+#add命令可添加文件到暂存区，commit命令可提交文件
+使用命令git add <file>，注意，可反复多次使用，添加多个文件；
+使用命令git commit -m <message>，完成
