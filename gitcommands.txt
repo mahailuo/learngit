@@ -1,0 +1,4 @@
+#设置全局作者名字、邮箱以便跟踪管理者
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+
