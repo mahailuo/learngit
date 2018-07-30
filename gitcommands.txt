@@ -10,7 +10,7 @@ git init
 使用命令git commit -m <message>，完成
 
 要随时掌握工作区的状态，使用git status命令
-如果git status告诉你有文件被修改过，用git diff可以查看修改内容
+如果git status告诉你有文件被修改过，用git diff <filename> 可以查看修改内容
 
 #查看操作日志
 git log 命令显示从最近到最远的提交日志
@@ -66,5 +66,12 @@ Git鼓励大量使用分支：
 创建分支：git branch <name>
 切换分支：git checkout <name>
 创建+切换分支：git checkout -b <name>
-合并某分支到当前分支：git merge <name>
+合并某分支到当前分支Fast forward模式：git merge <name>  
 删除分支：git branch -d <name>
+合并分支可查看历史记录：git merge --no-ff -m <message> <name>
+查看合并历史：git log --graph --pretty=oneline --abbrev-commit
+
+
+
+
+
