@@ -71,7 +71,21 @@ Git鼓励大量使用分支：
 合并分支可查看历史记录：git merge --no-ff -m <message> <name>
 查看合并历史：git log --graph --pretty=oneline --abbrev-commit
 
-
-
-
+#git bug管理
+Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+git stash
+git checkout master
+git checkout -b issue-101
+git add readme.txt 
+git commit -m "fix bug 101"
+git checkout master
+git merge --no-ff -m "merged bug fix 101" issue-101
+git checkout dev
+git status
+git stash list
+工作现场还在，Git把stash内容存在某个地方了，但是需要恢复一下，有两个办法：
+一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
+另一种方式是用git stash pop，恢复的同时把stash内容也删了
+git stash list
+git stash apply stash@{0}
 
